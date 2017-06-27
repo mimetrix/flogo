@@ -1,0 +1,42 @@
+{
+  "name": "kafka-json",
+  "version": "0.0.1",
+  "type": "flogo:trigger",
+  "ref": "github.com/mimetrix/flogo/triggers/kafka",
+  "title": "Match Kafka JSON message",
+  "description": "Kafka trigger on JSON value in message",
+  "author": "Nicolas Paton <nicolas@mantisnet.com>",
+  "homepage": "https://github.com/mimetrix/flogo/tree/master/triggers/kafka",
+  "settings":[
+    {
+      "name": "broker",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "message",
+      "type": "string"
+    }
+  ],
+  "handler": {
+    "settings": [
+      {
+        "name": "topic",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "jsonPath",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "jsonValue",
+        "type": "string",
+        "required": true
+      }
+    ]
+  }
+}
